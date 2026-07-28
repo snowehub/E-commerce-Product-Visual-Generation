@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ecommerce Visual Orchestrator"
+  short_description: "Plan and QA ecommerce sets with sliced detail masters"
+  default_prompt: "Use $ecommerce-visual-orchestrator to plan main images and one continuous ten-section detail master with publishable slices."
