@@ -5,19 +5,27 @@ description: Plan, write, generate, revise, and quality-check coordinated ecomme
 
 # Ecommerce Visual Orchestrator
 
-Coordinate ecommerce copy strategy and visual production as one locked workflow.
+Coordinate ecommerce planning, prompts, generation, and QA as separate on-demand stages.
 
 ## Workflow
 
 1. Collect platform, market, product facts, dimensions, materials, features, reference images, image count, language, and output size.
 2. Separate verified facts from inferred benefits. Do not invent technical performance or absolute fit claims.
 3. Build a product construction lock before writing prompts. Record silhouette, material, print, pockets, waistband, drawstring construction, visible components, positions, proportions, knot state, and forbidden hardware.
-4. Plan each image with one primary communication task. Avoid repeating the same selling point or composition.
-5. Write concise market-appropriate copy, then write the visual prompt around that copy and the construction lock.
-6. Generate draft images with the image-generation skill when requested.
-7. Build the detail page as one continuous long-image master, then create publishable slices from that accepted master.
-8. Inspect the master at full size, inspect every slice individually, and inspect all slices as a contact sheet. Reject failures before copying them into the final folder.
-9. Save final project assets in stable, clearly named folders and report their paths.
+4. Execute only the requested workflow: main images or detail page. Do not plan or generate both unless the user explicitly requests both.
+5. Default to planning, copy, and generation prompts only. Do not call ImageGen unless the user explicitly asks to generate or edit an image.
+6. Plan each image with one primary communication task, concise market-appropriate copy, and a prompt built around the construction lock.
+7. When generation is requested, create one representative sample first and wait for user approval before generating the remaining images.
+8. Build a detail page as one continuous long-image master. After approval, create publishable slices locally from that master instead of generating each slice independently.
+9. Inspect requested outputs at full size and save only accepted assets in stable, clearly named folders.
+
+## Generation budget
+
+- Treat approval to plan or write prompts as separate from approval to generate images.
+- Generate only the image or batch explicitly requested by the user.
+- Retry a failed image automatically at most once. If it still fails, stop and request direction.
+- Prefer editing the accepted source image for a local defect. Do not regenerate an accepted set or long-image master for an isolated issue.
+- Do not begin the next image or batch while sample approval is pending.
 
 ## Default 5-image main set
 
@@ -65,7 +73,7 @@ For each image specify: role, subject, composition, scene, construction lock, ex
 
 ## Final acceptance
 
-Reject and regenerate when any check fails:
+Reject an output when any check fails. Retry at most once automatically, then stop and request direction:
 
 - Correct image count, names, format, and dimensions.
 - White-background image uses an accepted complete full-body model when possible, otherwise a complete product-only fallback, and fully complies with the no-decoration rule.
@@ -79,4 +87,4 @@ Reject and regenerate when any check fails:
 - Each image still communicates its task when the text is hidden (Picture Solo Test).
 - The set contains meaningful visual variety without drifting from the product.
 
-Do not overwrite accepted final assets until the replacement candidate passes these checks.
+Do not overwrite accepted final assets or regenerate unaffected images when revising a failed candidate.
