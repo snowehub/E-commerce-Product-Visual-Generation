@@ -9,6 +9,8 @@ A reusable Codex skill for planning, generating, revising, and quality-checking 
 - Concise ecommerce copy and prompt guidance
 - Continuous long detail-page planning
 - Deterministic lossless slicing and pixel-perfect reconstruction checks
+- Lightweight execution: planning by default, explicit approval before ImageGen
+- One-sample-first generation and at most one automatic retry
 
 ## Install
 
@@ -51,3 +53,5 @@ Use $ecommerce-visual-orchestrator to create one continuous 800×8000 detail-pag
 ```
 
 Provide product facts, reference images, target platform and market, copy language, and required dimensions. Missing facts should be marked as missing rather than invented.
+
+The skill does not generate images during planning or prompt-writing tasks. ImageGen runs only after an explicit generation or editing request.
