@@ -13,7 +13,7 @@ Coordinate ecommerce planning, prompts, generation, and QA as separate on-demand
 2. Separate verified facts from inferred benefits. Do not invent technical performance or absolute fit claims.
 3. Build a product construction lock before writing prompts. Record silhouette, material, print, pockets, waistband, drawstring construction, visible components, positions, proportions, knot state, and forbidden hardware.
 4. Execute only the requested workflow: main images or detail page. Do not plan or generate both unless the user explicitly requests both.
-5. Default to planning, copy, and generation prompts only. Do not call ImageGen unless the user explicitly asks to generate or edit an image.
+5. Default to planning, copy, and generation prompts only. Do not generate images unless the user explicitly asks to generate or edit an image.
 6. Plan each image with one primary communication task, concise market-appropriate copy, and a prompt built around the construction lock.
 7. When generation is requested, create one representative sample first and wait for user approval before generating the remaining images.
 8. Build a detail page as one continuous long-image master. After approval, create publishable slices locally from that master instead of generating each slice independently.
